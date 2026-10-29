@@ -4,4 +4,6 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // github pages serves the site from /<repo-name>/
+  base: '/The-geologic-history-of-Southern-California/',
 })
