@@ -1,4 +1,29 @@
 import { useState } from 'react'
+import carrizoPlain from './assets/carrizo-plain.jpg'
+import sanGabriel from './assets/san-gabriel-mountains.jpg'
+
+const homeImages = [
+  {
+    src: carrizoPlain,
+    height: 853,
+    alt: 'Aerial view of a long, straight ridge and trench cutting across a dry grassy plain',
+    caption: 'The San Andreas Fault slicing across the Carrizo Plain, one of the clearest views of the fault anywhere.',
+    credit: 'Ikluft',
+    creditUrl: 'https://commons.wikimedia.org/wiki/File:Kluft-photo-Carrizo-Plain-Nov-2007-Img_0327.jpg',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  },
+  {
+    src: sanGabriel,
+    height: 960,
+    alt: 'Aerial view of rugged mountains rising above a hazy, fog-covered valley',
+    caption: 'The San Gabriel Mountains rising above the hazy San Gabriel Valley at the edge of the LA Basin.',
+    credit: 'Ken Lund',
+    creditUrl: 'https://commons.wikimedia.org/wiki/File:San_Gabriel_Mountains_and_Foggy_San_Gabriel_Valley,_California_(14331070040).jpg',
+    license: 'CC BY-SA 2.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+  },
+]
 
 const tabs = [
   { id: 'home', label: 'Home' },
@@ -49,6 +74,20 @@ function App() {
       <main id={`panel-${tab.id}`} role="tabpanel" aria-labelledby={`tab-${tab.id}`} className="panel">
         <h2>{tab.label}</h2>
         <p>Content coming soon.</p>
+
+        {tab.id === 'home' &&
+          homeImages.map((img) => (
+            <figure key={img.src}>
+              <img src={img.src} alt={img.alt} width="1280" height={img.height} loading="lazy" />
+              <figcaption>
+                {img.caption}{' '}
+                <span className="credit">
+                  Photo: <a href={img.creditUrl}>{img.credit}</a>,{' '}
+                  <a href={img.licenseUrl}>{img.license}</a>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
       </main>
     </>
   )
