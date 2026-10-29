@@ -4,7 +4,7 @@
   --rust: #b5532a;
   --off-white: #f6f1e7;
 
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   line-height: 1.5;
   color: var(--brown);
   background: var(--off-white);
@@ -30,7 +30,6 @@ body {
 
 .site-header h1 {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
 }
 
@@ -78,7 +77,6 @@ body {
 }
 
 .panel h2 {
-  font-family: Georgia, 'Times New Roman', serif;
   border-left: 6px solid var(--rust);
   padding-left: 0.75rem;
 }
