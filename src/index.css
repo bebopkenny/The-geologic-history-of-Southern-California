@@ -16,8 +16,14 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
   background: var(--off-white);
+}
+
+/* keeps the footer at the bottom on short pages */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .site-header {
@@ -71,6 +77,8 @@ body {
 }
 
 .panel {
+  flex: 1;
+  width: 100%;
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -105,4 +113,21 @@ figcaption {
 
 a {
   color: var(--brown);
+}
+
+.site-footer {
+  background: var(--brown);
+  color: var(--tan);
+  border-top: 4px solid var(--rust);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: var(--off-white);
 }

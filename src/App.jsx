@@ -89,6 +89,11 @@ function App() {
             </figure>
           ))}
       </main>
+
+      <footer className="site-footer">
+        <p>The Geologic History of Southern California &copy; {new Date().getFullYear()}</p>
+        <p>Photos from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, credited under each image.</p>
+      </footer>
     </>
   )
 }
