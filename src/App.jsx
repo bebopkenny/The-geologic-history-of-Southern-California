@@ -2,6 +2,8 @@ import { useState } from 'react'
 import carrizoPlain from './assets/carrizo-plain.jpg'
 import sanGabriel from './assets/san-gabriel-mountains.jpg'
 
+const year = new Date().getFullYear()
+
 const homeImages = [
   {
     src: carrizoPlain,
@@ -91,7 +93,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <p>The Geologic History of Southern California &copy; {new Date().getFullYear()}</p>
+        <p>The Geologic History of Southern California &copy; {year}</p>
         <p>Photos from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, credited under each image.</p>
       </footer>
     </>
